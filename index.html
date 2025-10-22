@@ -4,49 +4,75 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>XIMA LOVES JAHRA 💗</title>
+
+  <!-- 🌸 Pookie-style font -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
   <style>
     body {
-      background-color: #ffc0cb;
-      font-family: "Comic Sans MS", cursive, sans-serif;
+      background-color: #ff7fa9; /* darker pink */
+      font-family: 'Dancing Script', cursive;
       text-align: center;
       color: white;
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
     }
 
     h1 {
-      background: #ff69b4;
+      background: #ff4d88;
       color: white;
-      padding: 15px 25px;
-      border-radius: 20px;
+      padding: 15px 35px;
+      border-radius: 25px;
       margin-top: 25px;
       display: inline-block;
-      font-size: 26px;
-      box-shadow: 0 0 15px #ff1493;
+      font-size: 36px;
+      box-shadow: 0 0 20px #ff1493;
+      letter-spacing: 1px;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #fff, 0 0 20px #ff1493, 0 0 30px #ff69b4; }
+      to { text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff66b2; }
     }
 
     .timer-box {
       margin-top: 60px;
-      background-color: #ff8fa3;
+      background-color: #ff8fb7;
       display: inline-block;
       padding: 30px 40px;
       border-radius: 20px;
       box-shadow: 0 0 15px #ff4d88;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
     }
 
     #timer {
-      font-size: 22px;
+      font-size: 24px;
       font-weight: bold;
+      color: white;
     }
 
     /* Stickers */
     .stickers img {
       width: 90px;
       position: absolute;
+      animation: bounce 3s infinite ease-in-out;
     }
     .sticker1 { top: 100px; left: 20px; }
     .sticker2 { top: 100px; right: 20px; }
     .sticker3 { bottom: 120px; left: 50%; transform: translateX(-50%); }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
 
     .gallery {
       margin-top: 100px;
@@ -57,34 +83,39 @@
       color: #ff69b4;
       background-color: white;
       display: inline-block;
-      padding: 8px 16px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px #ff4d88;
-      font-size: 22px;
+      padding: 10px 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px #ff4d88;
+      font-size: 26px;
+      font-family: 'Dancing Script', cursive;
     }
 
     .photos {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
-      margin-top: 20px;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     .photos img {
       width: 300px;
       height: auto;
-      border-radius: 15px;
-      box-shadow: 0 0 10px #ff4d88;
+      border-radius: 20px;
+      box-shadow: 0 0 15px #ff4d88;
+      transition: transform 0.3s ease;
+    }
+
+    .photos img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
 
-  <h1>XIMA LOVES JAHRA SM 💞</h1>
+  <h1>XIMA LOVES JAHRA 💞</h1>
 
   <div class="stickers">
-    <!-- Use your own uploaded sticker image URLs -->
     <img src="sticker1.png" class="sticker1" />
     <img src="sticker2.png" class="sticker2" />
     <img src="sticker3.png" class="sticker3" />
